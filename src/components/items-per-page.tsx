@@ -15,8 +15,8 @@ export default function ItemsPerPageSelect({ onChange }: ItemsPerPageSelectProps
             <select onChange={handleSelectChange}>
                 <option value="12">12</option>
                 <option value="15">15</option>
-                <option value="15">18</option>
-                <option value="15">21</option>
+                <option value="18">18</option>
+                <option value="21">21</option>
             </select>
         </div>
     );
