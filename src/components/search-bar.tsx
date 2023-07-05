@@ -1,4 +1,3 @@
-import SearchIcon from "@/icons/search-icon";
 
 interface SearchBarProps {
     onChange: (query: string) => void;
@@ -15,7 +14,6 @@ export default function SearchBar({ onChange }: SearchBarProps) {
                 placeholder={placeholderText}
                 onChange={e => onChange(e.target.value || '')}
             />
-            <SearchIcon />
         </div>
     );
 }
