@@ -12,7 +12,7 @@ const debounce: DebounceFunction<(...args: any[]) => void> = (func, delay) => {
     timeoutId = setTimeout(() => {
       func.apply(this, args);
     }, delay);
-  } as T;
+  };
 };
 
 export default debounce;
