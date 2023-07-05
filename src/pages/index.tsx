@@ -39,7 +39,8 @@ export default function Home() {
   const filteredBooks = data?.filter(filterBooks.bind(null, query)) || [];
 
   return (
-    <main className="min-h-screen px-24 py-12 h-[100vh]">
+    <main className="min-h-screen px-2 md:px-24 py-6 h-[100vh]">
+      <h1 className="text-center text-xl mb-4">Books search</h1>
       <SearchBar onChange={handleSearch} />
       <ItemsPerPageSelect onChange={setCountPerPage} />
       <BooksContainer countPerPage={countPerPage} currentPage={currentPage} booksList={filteredBooks} />

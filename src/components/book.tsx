@@ -31,9 +31,14 @@ export default function Book(props: BookDetails) {
             <div className="max-w-2xl bg-white rounded-xl shadow-md overflow-hidden w-full h-full hover:shadow-xl transition duration-300">
                 <div className="md:flex">
                     <div className="md:flex-shrink-0">
-                        <Image alt={coverImageAlt} width={200} height={300} className="object-fit h-full w-48" src={coverImageUrl} />
+                        <Image
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                            className="w-full h-auto object-cover"
+                            alt={coverImageAlt} src={coverImageUrl} />
                     </div>
-                    <div className="p-8">
+                    <div className="px-4">
                         <label className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{title}</label>
                         {generateLabels(attributes).map((label, index) => (
                             <LabelValue key={index} {...label} />

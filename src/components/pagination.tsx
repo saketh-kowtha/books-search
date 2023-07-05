@@ -6,7 +6,7 @@ interface PaginationProps {
 
 export default function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
     return (
-        <nav className="flex items-center justify-center mt-4">
+        <div className="flex items-center justify-center mt-4 px-4 overflow-auto">
             <ul className="flex space-x-2">
                 {currentPage !== 1 && (
                     <li>
@@ -44,7 +44,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
                     </li>
                 )}
             </ul>
-        </nav>
+        </div>
     );
 }
 
